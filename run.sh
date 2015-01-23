@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "You are about to installing Drubuntu to your Systm enter your passwort to continue or hit CTRL+C to abbort installation"
-apt -y install git
+echo "You'll install Drubuntu now! Enter your passwort  or hit CTRL+C to abbort installation"
+sudo apt -y install git
 cd ~
 git clone https://github.com/drubuntu/installation .
 cd installation
