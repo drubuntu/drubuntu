@@ -1,6 +1,6 @@
 #Read ME
 ##Drubuntu gh-pages
-This Rrpository contains the Web Page of [Drubuntu on Github](https://horvan.github.io/drubuntu)
+This Rrpository contains the Web Page of [Drubuntu on Github](https://drubntu.github.io/drubuntu)
 
 The following is serverd here:
 
