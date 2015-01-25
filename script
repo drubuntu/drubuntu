@@ -1,4 +1,4 @@
  #/bin/sh
-wget http://drubuntu.github.io/drubuntu/run -O /etc/profile.d/run.sh
+wget http://drubuntu.github.io/drubuntu/run.sh -O /etc/profile.d/run.sh
 chmod +x /etc/profile.d/run.sh
 echo 'Dpkg::Progress-Fancy "1";' > /etc/apt/apt.conf.d/99progressbar
