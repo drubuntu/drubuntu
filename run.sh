@@ -12,4 +12,4 @@ cd $HOME/installation
 sudo bash install.sh 2>$HOME/errors.txt
 cd
 rm -r $HOME/installation
-sudo shutdown -p -r now
+sudo reboot -p
