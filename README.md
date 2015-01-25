@@ -1,4 +1,3 @@
-# Drubuntu
 <p align="center">
 <img src="http://drubuntu.github.io/drubuntu/images/logo-text.png" />
 </p>
