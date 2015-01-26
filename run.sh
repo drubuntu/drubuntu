@@ -1,6 +1,4 @@
 #!/bin/bash
-
-#!/bin/bash
 if [ "$LANG" == "de_DE.UTF-8" ];then
 echo "Um Drubuntu zu installieren geben Sie Ihr Passwort ein oder drücken Sie STRG+C um abzubrechen."
 else
