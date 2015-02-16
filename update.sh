@@ -1,13 +1,18 @@
+#!/bin/bash
+if [ `whoami` != root ]; then #checks if the user is root. If The user isn't root the message is printed and the script will be interrupted.
+
+    echo -e " ${lightred}  ${runasrootmssg} ${NC}"
+
+
+    exit
+4 
+fi
 if [ "$LANG" == "de_DE.UTF-8" ];then
 wyltidmssg="Möchten Sie Drubuntu jetzt installieren"
 else
-wyltidmssg="Would you like to install drubuntu now?
+wyltidmssg="Would you like to install drubuntu now?"
 fi
-
-
-sudo apt -y -qq install git git core
-
-
+sudo apt -y -qq install git git-core
 function clone(){
 cd "$HOME"
 git clone https://github.com/drubuntu/installation.git "$HOME"/installation
@@ -23,20 +28,16 @@ sudo chmod +x /opt/.drubutu/*.sh
 function delete(){
 sudo rm -r installation features desktops
 }
-
 if ! [ -d /opt/.drubuntu ];then
 echo "Install Drubuntu fiirst"
-
 while true; do
 		read -p "${wyltidmssg}" yn
 		case $yn in
 [Yy]* ) 
-
 cd $HOME/installation
 sudo bash install.sh 2>$HOME/errors.txt
-
  ;;
-		[Nn]* ) rm -r $0;;
+		[Nn]* ) rm -r $0;;exit
 		* ) 
 		esac
 	done  
