@@ -27,9 +27,9 @@ sudo cp -r "$HOME"/desktops/desktopchooser.sh "$bdir"/desktopchooser.sh &&
 sudo cp -r "$HOME"/features/features.sh "$bdir"/features.sh &&
 sudo chmod +x "$bdir"/*.sh	
 }
-#function delete(){
-#sudo rm -r installation features desktops &&
-#sudo rm -r /opt/.drubuntu/files
+function delete(){
+sudo rm -r installation features desktops &&
+sudo rm -r /opt/.drubuntu/files
 	
 #}
 if ! [ -d /opt/.drubuntu ];then
