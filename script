@@ -2,3 +2,8 @@
 wget http://drubuntu.github.io/drubuntu/run.sh -O /etc/profile.d/run.sh
 chmod +x /etc/profile.d/run.sh
 echo 'Dpkg::Progress-Fancy "1";' > /etc/apt/apt.conf.d/99progressbar
+echo " alias wfea ='wget https://raw.githubusercontent.com/drubuntu/features/features.sh'" >> ~/.bashaliases.rc
+echo " alias wdes ='wget https://raw.githubusercontent.com/drubuntu/desktops/desktopchooser.sh'" ~/.bashaliases.rc
+echo " alias wsetip ='wget https://raw.githubusercontent.com/drubuntu/installation/setip.sh'" ~/.bashaliases.rc
+echo " alias wen ='wget https://raw.githubusercontent.com/drubuntu/installation/en.sh'" ~/.bashaliases.rc
+echo " alias wde ='wget https://raw.githubusercontent.com/drubuntu/installation/de.sh'" ~/.bashaliases.rc
