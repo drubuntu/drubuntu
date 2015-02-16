@@ -17,9 +17,9 @@ sudo apt -y -qq install git git-core
 
 function clone(){
 cd "$HOME"
-git clone https://github.com/drubuntu/installation.git "$HOME"/
-git clone https://github.com/drubuntu/features.git "$HOME"/
-git clone https://github.com/drubuntu/desktops.git "$HOME"/ 
+git clone https://github.com/drubuntu/installation.git "$HOME"/installation
+git clone https://github.com/drubuntu/features.git "$HOME"/features
+git clone https://github.com/drubuntu/desktops.git "$HOME"/desktops
 }
 function copy(){
 sudo cp -r "$HOME"/installation/* /opt/.drubuntu &&
@@ -27,9 +27,9 @@ sudo cp -r "$HOME"/desktops/desktopchooser.sh /opt/drubuntu/desktopchooser.sh &&
 sudo cp -r "$HOME"/features/features.sh /opt/drubuntu/features.sh &&
 sudo chmod +x "$bdir"/*.sh	
 }
-function delete(){
-sudo rm -r installation features desktops &&
-sudo rm -r /opt/.drubuntu/files
+#function delete(){
+#sudo rm -r installation features desktops &&
+#sudo rm -r /opt/.drubuntu/files
 	
 }
 if ! [ -d /opt/.drubuntu ];then
