@@ -8,9 +8,9 @@ if [ `whoami` != root ]; then #checks if the user is root. If The user isn't roo
 4 
 fi
 if [ "$LANG" == "de_DE.UTF-8" ];then
-wyltidmssg="Möchten Sie Drubuntu jetzt installieren"
+wyltidmssg="Möchten Sie Drubuntu jetzt installieren y/n"
 else
-wyltidmssg="Would you like to install drubuntu now?"
+wyltidmssg="Would you like to install drubuntu now?  y/n"
 fi
 bdir=/opt/.drubuntu
 sudo apt -y -qq install git git-core
@@ -37,7 +37,8 @@ echo "Install Drubuntu fiirst"
 while true; do
 		read -p "${wyltidmssg}" yn
 		case $yn in
-[Yy]* ) 
+[YyJj]* ) 
+git clone https://github.com/drubuntu/installation.git "$HOME"/installation
 cd $HOME/installation
 sudo bash install.sh 2>$HOME/errors.txt
  ;;
