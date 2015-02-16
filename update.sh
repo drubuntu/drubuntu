@@ -21,7 +21,7 @@ git clone https://github.com/drubuntu/desktops.git "$HOME"/desktops
 }
 function copy(){
 sudo cp -r installation/* /opt/.drubuntu
-sudo cp -r features/desktopchooser.sh /opt/drubuntu/desktopchooser.sh
+sudo cp -r desktops/desktopchooser.sh /opt/drubuntu/desktopchooser.sh
 sudo cp -r features/features.sh /opt/drubuntu/features.sh
 sudo chmod +x /opt/.drubutu/*.sh
 }
