@@ -14,11 +14,12 @@ wyltidmssg="Would you like to install drubuntu now?"
 fi
 bdir=/opt/.drubuntu
 sudo apt -y -qq install git git-core
+
 function clone(){
 cd "$HOME"
 git clone https://github.com/drubuntu/installation.git "$HOME"/installation &&
 git clone https://github.com/drubuntu/features.git "$HOME"/features &&
-git clone https://github.com/drubuntu/desktops.git "$HOME"/desktops &&
+git clone https://github.com/drubuntu/desktops.git "$HOME"/desktops 
 }
 function copy(){
 sudo cp -r "$HOME"/installation/* /opt/.drubuntu &&
@@ -27,7 +28,7 @@ sudo cp -r "$HOME"/features/features.sh /opt/drubuntu/features.sh &&
 sudo chmod +x "$bdir"/*.sh	
 }
 function delete(){
-sudo rm -r installation features desktops
+sudo rm -r installation features desktops &&
 sudo rm -r /opt/.drubuntu/files
 	
 }
