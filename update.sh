@@ -17,9 +17,9 @@ sudo apt -y -qq install git git-core
 
 function clone(){
 cd "$HOME"
-git clone https://github.com/drubuntu/installation.git "$HOME"/installation &&
-git clone https://github.com/drubuntu/features.git "$HOME"/features &&
-git clone https://github.com/drubuntu/desktops.git "$HOME"/desktops 
+git clone https://github.com/drubuntu/installation.git "$HOME"/
+git clone https://github.com/drubuntu/features.git "$HOME"/
+git clone https://github.com/drubuntu/desktops.git "$HOME"/ 
 }
 function copy(){
 sudo cp -r "$HOME"/installation/* /opt/.drubuntu &&
