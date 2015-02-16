@@ -37,7 +37,7 @@ while true; do
 cd $HOME/installation
 sudo bash install.sh 2>$HOME/errors.txt
  ;;
-		[Nn]* ) rm -r $0;;exit
+		[Nn]* ) rm -r $0;;
 		esac
 	done  
 	else
