@@ -1,0 +1,22 @@
+#!/bin/bash
+#these is the container file to make sure the user is entering his password once because we install things on the system and need to be root!
+if [ "$LANG" == "de_DE.UTF-8" ];then
+echo "Um Drubuntu zu installieren geben Sie Ihr Passwort ein oder drücken Sie STRG+C um abzubrechen."
+else
+echo "You'll install Drubuntu now! Enter your passwort  or hit CTRL+C to abbort installation"
+fi
+
+if  ! [ -d ~/installation ];then
+sudo apt -qq -y install git >> /dev/null 2>&1 && sudo git clone https://github.com/drubuntu/installation $HOME/installation >> /dev/null 2>&1
+fi
+
+if [ "$LANG" == "de_DE.UTF-8" ];then
+echo "Wir bereiten Drubuntus Installation vor. bitte haben Sie eine Augenbllick geduld!"
+else
+echo "We are preparing drubuntu for installation. Be patient, please!"
+fi
+
+
+cd $HOME/installation
+sudo bash install 2>$HOME/errors.txt
+#rm -r $HOME/installation
