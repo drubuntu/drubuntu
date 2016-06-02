@@ -1,6 +1,7 @@
  #/bin/sh
-wget http://drubuntu.github.io/drubuntu/drubuntu.run -O /etc/profile.d/drubuntu.run
+wget http://drubuntu.github.io/drubuntu/drubuntu.run -O /etc/profile.d/drubuntu.sh
 chmod +x /etc/profile.d/drubuntu.run
+
 #These are some aliases for develoment. They can be safely  ignored 
 echo 'Dpkg::Progress-Fancy "1";' > /etc/apt/apt.conf.d/99progressbar
 echo " alias wfea ='wget https://raw.githubusercontent.com/drubuntu/features/features.sh'" >> ~/.bashaliases.rc
