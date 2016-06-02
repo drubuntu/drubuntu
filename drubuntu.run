@@ -27,9 +27,9 @@ sudo apt -qq -y install git >> /dev/null 2>&1 && sudo git clone https://github.c
 fi
 
 if [ "$LANG" == "de_DE.UTF-8" ];then
-echo -e "  ${lightgreen} Wir bereiten Drubuntus Installation vor. bitte haben Sie eine Augenbllick geduld! ${nc}"
+echo -e "  ${lightgreen} Wir bereiten Drubuntus Installation vor. Bitte haben Sie eine Augenbllick geduld! ${nc}"
 else
-echo -e "  ${lightgreen} We are preparing drubuntu for installation. Be patient, please! ${nc}"
+echo -e "  ${lightgreen} We are preparing Drubuntu for installation. Be patient, please! ${nc}"
 fi
 
 
