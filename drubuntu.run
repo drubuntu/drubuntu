@@ -15,8 +15,7 @@ lightred='\033[1;31m'
 lightpurple='\033[1;35m'
 yellow='\033[1;33m'
 NC='\033[0m'
-desktool=/opt/.drubunutu/desktopchooser.sh
-
+desktool=/opt/.drubuntu/desktopchooser.sh
 #these is the container file to make sure the user is entering his password once because we install things on the system and need to be root!
 if [ "$LANG" == "de_DE.UTF-8" ];then
 echo -e "  ${red} Um Drubuntu zu installieren geben Sie Ihr Passwort ein oder drücken Sie STRG+C um abzubrechen. ${nc}"
@@ -37,5 +36,12 @@ fi
 
 cd $HOME/installation
 sudo bash install 2>$HOME/log.txt
+cd $HOME
 rm -r $HOME/installation
+if [ "$LANG" == "de_DE.UTF-8" ];then
+echo -e "  ${lightgreen} Die Installation ist beendet. Im nächsten Schritt installieren Sie auf Wunsch einen grafischen Desktop! ${nc}"
+else
+eho -e "  ${lightgreen} The setup is finished, now with the next step you'll install a graphical desktop! ${nc}"
+fi
+
 sudo bash "$desktool"
